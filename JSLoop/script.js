@@ -54,9 +54,59 @@ for (let i = maria.length - 1; i >= 0; i--) {
 }
 
 for (let exercice = 1; exercice < 4; exercice++) {
-    console.log(`-------Starting Exercice ${exercice}`);
+    console.log(`-------Starting Exercice------- ${exercice}`);
 
     for (let rep = 1; rep < 6; rep++) {
-        console.log(`------Lifting weight repetion ${rep} `);
+        console.log(`Exercise ${exercice}:Lifting weight repetion ${rep} `);
     }
 }
+
+//WHILE Loop= more versatile than for loop>=for larger variety of situation-does not really need a counter
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`While:Lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice == 6)
+        console.log('Loop is about to END....');
+}
+//Chalenge
+const calcTip = function (bill) {
+    return bill >= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+}
+const bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const total = [];
+
+for (let i = 0; i < bill.length; i++) {
+    const tip = calcTip(bill[i]);
+    tips.push(tip);
+    total.push(tip + bill[i]);
+}
+console.log(bill, tips, total);
+
+//BonusChalenge
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum=sum+arr[i]
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(total));
+console.log(calcAverage(tips));
+
+
