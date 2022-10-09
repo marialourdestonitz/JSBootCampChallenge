@@ -105,7 +105,7 @@ const calcAverage = function (arr) {
     }
     return sum / arr.length;
 }
-console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage([6, 5, 7]));
 console.log(calcAverage(total));
 console.log(calcAverage(tips));
 

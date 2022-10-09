@@ -70,3 +70,21 @@ const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
 const total = [bill[0] + tip[0], bill[1] + tip[1], bill[2] + tip[2]];
 
 console.log(bill, tip, total);
+
+//1. Understanding Problem
+//-Array transformed to String, seperated by ...
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+console.log(`...${data1[0]}°C ...${data1[1]}°C ...${data1[2]}°C`);
+
+const printForecast = function (arr) {
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+        str = str + `${arr[i]}°C in ${i + 1}days...`;
+        console.log('...' + str);
+    }
+};
+printForecast(data1);
+printForecast(data2);
